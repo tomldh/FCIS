@@ -42,12 +42,33 @@ class PascalVOC(IMDB):
         self.devkit_path = devkit_path
         self.data_path = os.path.join(devkit_path, 'VOC' + year)
 
+        # self.classes = ['__background__',  # always index 0
+        #                 'aeroplane', 'bicycle', 'bird', 'boat',
+        #                 'bottle', 'bus', 'car', 'cat', 'chair',
+        #                 'cow', 'diningtable', 'dog', 'horse',
+        #                 'motorbike', 'person', 'pottedplant',
+        #                 'sheep', 'sofa', 'train', 'tvmonitor']
         self.classes = ['__background__',  # always index 0
-                        'aeroplane', 'bicycle', 'bird', 'boat',
-                        'bottle', 'bus', 'car', 'cat', 'chair',
-                        'cow', 'diningtable', 'dog', 'horse',
-                        'motorbike', 'person', 'pottedplant',
-                        'sheep', 'sofa', 'train', 'tvmonitor']
+        'alphabet_of_the_magi_character01',
+        'alphabet_of_the_magi_character02',
+        'alphabet_of_the_magi_character03',
+        'alphabet_of_the_magi_character04',
+        'alphabet_of_the_magi_character05',
+        'alphabet_of_the_magi_character06',
+        'alphabet_of_the_magi_character07',
+        'alphabet_of_the_magi_character08',
+        'alphabet_of_the_magi_character09',
+        'alphabet_of_the_magi_character10',
+        'alphabet_of_the_magi_character11',
+        'alphabet_of_the_magi_character12',
+        'alphabet_of_the_magi_character13',
+        'alphabet_of_the_magi_character14',
+        'alphabet_of_the_magi_character15',
+        'alphabet_of_the_magi_character16',
+        'alphabet_of_the_magi_character17',
+        'alphabet_of_the_magi_character18',
+        'alphabet_of_the_magi_character19',
+        'alphabet_of_the_magi_character20']
         self.num_classes = len(self.classes)
         self.image_set_index = self.load_image_set_index()
         self.num_images = len(self.image_set_index)
@@ -68,6 +89,7 @@ class PascalVOC(IMDB):
         assert os.path.exists(image_set_index_file), 'Path does not exist: {}'.format(image_set_index_file)
         with open(image_set_index_file) as f:
             image_set_index = [x.strip() for x in f.readlines()]
+        image_set_index=image_set_index[:5]
         return image_set_index
 
     def image_path_from_index(self, index):
