@@ -89,7 +89,6 @@ class PascalVOC(IMDB):
         assert os.path.exists(image_set_index_file), 'Path does not exist: {}'.format(image_set_index_file)
         with open(image_set_index_file) as f:
             image_set_index = [x.strip() for x in f.readlines()]
-        image_set_index=image_set_index[:5]
         return image_set_index
 
     def image_path_from_index(self, index):
