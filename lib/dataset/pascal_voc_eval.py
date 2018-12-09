@@ -347,7 +347,7 @@ def check_voc_sds_cache(cache_dir, devkit_path, image_names, class_names):
     if not exist_cache:
         # load annotations:
         # create a list with size classes
-        record_list = [{} for _ in xrange(21)]
+        record_list = [{} for _ in xrange(31)]
         for i, image_name in enumerate(image_names):
             record = parse_inst(image_name, devkit_path)
             for j, mask_dic in enumerate(record):

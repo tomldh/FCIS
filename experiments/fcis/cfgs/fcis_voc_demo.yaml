@@ -16,9 +16,9 @@ network:
   pretrained: "./model/pretrained_model/resnet_v1_101"
   pretrained_epoch: 0
   PIXEL_MEANS:
-  - 103.06
-  - 115.90
-  - 123.15
+  - 4.31
+  - 4.27
+  - 4.31
   IMAGE_STRIDE: 0
   RCNN_FEAT_STRIDE: 16
   RPN_FEAT_STRIDE: 16
@@ -50,7 +50,7 @@ network:
   - 32
   NUM_ANCHORS: 9
 dataset:
-  NUM_CLASSES: 21
+  NUM_CLASSES: 31
   dataset: PascalVOC
   dataset_path: "./data/VOCdevkit"
   image_set: SDS_train
