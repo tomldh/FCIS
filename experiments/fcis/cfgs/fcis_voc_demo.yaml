@@ -10,7 +10,7 @@ SCALES:
 MASK_SIZE: 21
 BINARY_THRESH: 0.4
 default:
-  frequent: 100
+  frequent: 20
   kvstore: device
 network:
   pretrained: "./model/pretrained_model/resnet_v1_101"
