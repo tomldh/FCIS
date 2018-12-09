@@ -43,7 +43,7 @@ def main():
     sym = sym_instance.get_symbol(config, is_train=False)
 
     # set up class names
-    num_classes = 21
+    num_classes = 31
     classes =['alphabet_of_the_magi',
     'anglo-saxon_futhorc',
     'arcadian',
