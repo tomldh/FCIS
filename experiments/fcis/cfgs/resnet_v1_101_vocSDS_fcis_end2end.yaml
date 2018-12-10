@@ -48,7 +48,7 @@ network:
   - 8
   - 16
   - 32
-  NUM_ANCHORS: 9  
+  NUM_ANCHORS: 9
 dataset:
   NUM_CLASSES: 31
   dataset: PascalVOC
@@ -74,7 +74,7 @@ TRAIN:
   # whether shuffle image
   SHUFFLE: true
   # whether use OHEM
-  ENABLE_OHEM: false
+  ENABLE_OHEM: true
   # size of images for each device, 2 for rcnn, 1 for rpn and e2e
   BATCH_IMAGES: 1
   # e2e changes behavior of anchor loader and metric
@@ -133,7 +133,7 @@ TRAIN:
   - 0.5
   - 0.5
   BINARY_THRESH: 0.4
-  LOSS_WEIGHT: 
+  LOSS_WEIGHT:
   - 1.0
   - 10.0
   - 1.0
